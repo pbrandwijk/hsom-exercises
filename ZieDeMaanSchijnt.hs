@@ -3,7 +3,9 @@ module ZieDeMaanSchijnt where
 import Euterpea
 
 main :: IO ()
-main = playDev 4 $ instrument Bassoon $ tempo (8 / 5) song
+main = putStrLn "Please run function zieDeMaanSchijnt from GHCi"
+
+zieDeMaanSchijnt = playDev 2 $ instrument Bassoon $ tempo (8 / 5) song
 
 cM = c 3 hn :+: (e 3 hn :=: g 3 hn) :+: (e 3 hn :=: g 3 hn)
 
