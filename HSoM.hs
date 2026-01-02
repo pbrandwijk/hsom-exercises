@@ -69,3 +69,5 @@ translateBlues (Fi, o) = (G, o)
 translateBlues (MS, o) = (Bf, o)
 
 bluesTest d = ro 4 d :+: mt 4 d :+: fo 4 d :+: fi 4 d :+: ms 4 d
+
+playBluesTest = playDev 2 $ fromBlues $ bluesTest qn
