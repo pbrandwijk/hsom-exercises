@@ -5,7 +5,7 @@ import Euterpea
 main :: IO ()
 main = putStrLn "Please run function zieDeMaanSchijnt from GHCi"
 
-zieDeMaanSchijnt = playDev 2 $ instrument Bassoon $ tempo (8 / 5) song
+zieDeMaanSchijnt = playDev 2 $ instrument Bassoon $ tempo (8 / 3) song
 
 cM = c 3 hn :+: (e 3 hn :=: g 3 hn) :+: (e 3 hn :=: g 3 hn)
 
