@@ -1,6 +1,6 @@
 # HSoM
 
-This project contains the implementation of the exercises of the book Haskell School of Music. It is intended to be run with development container.
+This project contains the implementation of the exercises of the book Haskell School of Music. It is intended to be run with a development container.
 
 ## Running the code
 
