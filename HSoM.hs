@@ -71,3 +71,40 @@ translateBlues (MS, o) = (Bf, o)
 bluesTest d = ro 4 d :+: mt 4 d :+: fo 4 d :+: fi 4 d :+: ms 4 d
 
 playBluesTest = playDev 2 $ fromBlues $ bluesTest qn
+
+-- Exercise 2.3
+
+demonstrate = map (absPitch . pitch) $ take 70 [0..]
+
+
+
+-- Exercise 3.1
+
+f1 :: Int -> [Pitch] -> [Pitch]
+f1 i ps = map (trans i) ps
+
+f2 :: [Dur] -> [Music a]
+f2 ds = map rest ds
+
+f3 :: [Music Pitch] -> [Music Pitch]
+f3 ms = map half ms
+
+half :: Music Pitch -> Music Pitch
+half (Prim (Note d p)) = (Prim (Note (d/2) p)) :+: (Prim (Rest (d/2)))
+half mp = mp
+
+
+-- Exercise 3.4
+
+applyEach :: [(a -> b)] -> a -> [b]
+applyEach fs v = map (\f -> f v) fs
+
+-- Exercise 3.5
+
+applyAll :: [(a -> a)] -> a -> a
+applyAll fs v = foldr id v fs
+
+-- Exercise 3.7
+
+length' :: [a] -> Int
+length' xs = foldr (+) 1 (map (\x -> 1) xs)
